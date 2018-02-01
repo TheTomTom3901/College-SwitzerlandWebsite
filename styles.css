@@ -32,7 +32,8 @@ p {
 
 #navbar .active {
     color: #000;
-    font-weight: bolder;
+    font-weight: bold;
+    font-family: Rockwell;
 }
 
 #navbar h1 {
