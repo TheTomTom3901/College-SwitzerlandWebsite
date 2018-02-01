@@ -30,6 +30,11 @@ p {
     background: rgb(155, 45, 31);
 }
 
+#navbar .active {
+    color: #000;
+    font-weight: bolder;
+}
+
 #navbar h1 {
     padding: 0.5em 1em;
     padding-bottom: 0;
