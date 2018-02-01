@@ -57,92 +57,6 @@ p {
     padding: 0.5em;
 }
 
-/* Showcase */
-#showcase {
-    min-height: 350px;
-    color: #fff;
-    text-align: center;
-}
-
-#showcase h1 {
-    font-family: Matura MT Script Capitals;
-    font-size: 3em;
-    padding-top: 50px;
-    padding-bottom: 0;
-}
-
-#showcase .bg-image {
-    position: absolute;
-    background: #333 url("resources/night-town.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-#showcase .logo img {
-    width: 11em;
-    display: inline-block;
-}
-
-#showcase .content-wrap,
-#section-a .content-wrap,
-#section-b .content-wrap {
-    padding: 0 1.5em;
-    padding-bottom: 0.5em;
-}
-
-/* Section A */
-#section-a {
-    background: #eaeaea;
-    color: #333;
-    padding-bottom: 1em;
-}
-
-#section-a .content-title,
-#section-b .content-title {
-    font-family: Rockwell;
-    font-size: 1.6em;
-    padding-top: 0.3em;
-    padding-bottom: 0;
-}
-
-/* Section B */
-#section-b {
-    background: #333;
-}
-
-#section-b .content-text {
-    padding-bottom: 0.5em;
-}
-
-#section-b ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-#section-b li {
-    display: inline-block;
-    margin: 0 1em;
-    margin-bottom: 0.5em;
-    background: #fff;
-}
-
-#section-b li:hover {
-    background: #eaeaea;
-    z-index: 1;
-    opacity: 0.8;
-    cursor: help;
-}
-
-#section-b img {
-    border: 2px #fff solid;
-}
-
 /* Footer */
 #main-footer {
     background: rgb(155, 45, 31);
@@ -163,7 +77,6 @@ p {
     }
 
     .content-wrap,
-    #section-b h1,
     #main-footer div,
     #main-footer ul {
         grid-column: 1/5;
@@ -192,27 +105,10 @@ p {
         grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
     }
 
-    .content-wrap, 
-    #section-b ul,
-    #section-b h1,
+    .content-wrap,
     #main-footer div,
     #main-footer ul {
         grid-column: 1/5;
-    }
-
-    #section-b ul {
-        display: inline-block;
-        margin-bottom: 0.3em;
-    }
-
-    #section-b li {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        width: 45%;
-    }
-
-    #showcase .logo img {
-        width: 13em;
     }
 }
 
@@ -223,30 +119,13 @@ p {
     }
 
     .content-wrap, 
-    #section-b ul,
-    #section-b h1,
     #main-footer div,
     #main-footer ul {
         grid-column: 2/4;
     }
-
-    #section-b ul {
-        display: inline-block;
-        margin-bottom: 0.3em;
-    }
-
-    #section-b li {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        width: 45%;
-    }
 }
 
 @media(min-width: 768px) and (max-width: 799px) {
-    #showcase .logo img {
-        width: 12em;
-    }
-
     body {
         font-size: 1.1em;
     }
@@ -264,10 +143,6 @@ p {
     #navbar a {
         font-size: 1.2em;
     }
-
-    #showcase .bg-image {
-        height: 530px;
-    }
 }
 
 @media(max-width: 360px) {
@@ -277,14 +152,6 @@ p {
 
     #navbar a {
         font-size: 1.1em;
-    }
-
-    #showcase h1 {
-        font-size: 2em;
-    }
-
-    #showcase .bg-image {
-        height: 550px;
     }
 }
   
