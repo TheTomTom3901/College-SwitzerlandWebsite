@@ -87,22 +87,6 @@ p {
     #main-footer ul {
         grid-column: 1/5;
     }
-
-    #section-b ul {
-        grid-column: 2/4;
-        display: inline-block;
-        margin-bottom: 0.3em;
-    }
-
-    #section-b li {
-        margin-left: 0.5em;
-        margin-right: 0.5em;
-        width: 30%;
-    }
-
-    #showcase .logo img {
-        width: 15em;
-    }
 }
 
 @media(min-width: 900px) and (max-width: 1024px) {

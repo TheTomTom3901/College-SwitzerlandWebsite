@@ -14,7 +14,7 @@
 
 #showcase .bg-image {
     position: absolute;
-    background: #333 url("resources/night-town.jpeg");
+    background: #333 url("resources/index/night-town.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
