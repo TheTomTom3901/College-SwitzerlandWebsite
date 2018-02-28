@@ -48,23 +48,3 @@
 }
 
 /* Media Queries */
-@media(min-width: 426px) and (max-width: 768px) {
-    #section-a img {
-        width: 330px;
-    }
-    #section-b img {
-        width: 600px;
-    }
-}
-
-@media(min-width: 376px) and (max-width: 425px) {
-    #section-a img {
-        width: 350px;
-    }
-}
-
-@media(min-width: 321px) and (max-width: 375px) {
-    #section-a img {
-        width: 300px;
-    }
-}
