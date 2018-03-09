@@ -10,6 +10,7 @@
     <title>Switzerland Tourism | Tourism</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tourism.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -32,10 +33,11 @@
         </ul>
     </nav>
 
-    <!-- Section A -->
-    <section id="section-a" class="grid">
+    <!-- Showcase -->
+    <section id="showcase" class="grid">
+        <div class="bg-image"></div>
         <div class="content-wrap">
-            <h2 class="content-title">Cern | Large Hadron Collider</h2>
+            <h2 class="content-title">Geneva</h2>
             <div class="content-text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tempore provident, consequatur nostrum nobis illum id magnam?
                 Quibusdam sequi est veniam, distinctio fuga nihil maxime autem quisquam nisi deleniti laudantium incidunt
@@ -43,19 +45,73 @@
                 nobis, error quibusdam hic sint id reiciendis? Assumenda sunt dolorem repellat, consequuntur nesciunt aut
                 nisi.
             </div>
-            <ul>
-                <li><img src="resources/tourism/cern1.jpg" alt=""></li>
-                <li><img src="resources/tourism/cern3.jpg" alt=""></li>
-            </ul>
+            <a href="http://www.ville-geneve.ch/welcome-geneva/" class="btn">More Information</a>
         </div>
+    </section>
+
+    <!-- Section A -->
+    <section id="section-a" class="grid">
+        <div class="content-wrap">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="resources/tourism/geneva/town.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/geneva/fountain.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/geneva/winter.jpeg">
+                </div>
+                    
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
     </section>
 
     <!-- Section B -->
     <section id="section-b" class="grid">
         <div class="content-wrap">
-            <div class="map">
-                <img src="resources/tourism/map.png" alt="">
-            </div>
+            <img src="resources/tourism/map.png" alt="" class="map">
+            <div class="material-icons" style="font-size: 30px">&#xe55c;</div>
         </div>
     </section>
 
