@@ -1,12 +1,6 @@
-/* Showcase */
-#showcase .content-wrap {
-    padding: 0 0.5em;
-    padding-bottom: 0.5em;
-}
-
 /* Section A */
 #section-a .bg-image {
-    background: #333 url("resources/scenery/peak.jpg");
+    background: #333 url("resources/scenery/lake.jpg");
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,7 +13,7 @@
 
 /* Section B */
 #section-b .bg-image {
-    background: #333 url("resources/scenery/alps.jpg");
+    background: #333 url("resources/scenery/peak.jpg");
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,7 +26,7 @@
 
 /* Section C */
 #section-c .bg-image {
-    background: #333 url("resources/scenery/icecave.jpg");
+    background: #333 url("resources/scenery/alps.jpg");
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,7 +39,33 @@
 
 /* Section D */
 #section-d .bg-image {
+    background: #333 url("resources/scenery/icecave.jpg");
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Section E */
+#section-e .bg-image {
     background: #333 url("resources/scenery/bern.jpg");
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* Section F */
+#section-f .bg-image {
+    background: #333 url("resources/scenery/rhine-falls.jpg");
     position: absolute;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,7 +80,9 @@
 #section-a,
 #section-b,
 #section-c,
-#section-d {
+#section-d,
+#section-e,
+#section-f {
     height: 300px;
     text-align: center;
 }
@@ -68,7 +90,9 @@
 #section-a .container,
 #section-b .container,
 #section-c .container,
-#section-d .container {
+#section-d .container,
+#section-e .container,
+#section-f .container {
     position: relative;
     display: inline-block;
     height: 300px;
@@ -78,7 +102,9 @@
 #section-a .overlay,
 #section-b .overlay,
 #section-c .overlay,
-#section-d .overlay {
+#section-d .overlay,
+#section-e .overlay,
+#section-f .overlay {
     position: absolute;
     background: #333;
     top: 0;
@@ -98,21 +124,29 @@
 #section-c .container:hover .overlay,
 #section-c .container:hover .content,
 #section-d .container:hover .overlay,
-#section-d .container:hover .content {
+#section-d .container:hover .content,
+#section-e .container:hover .overlay,
+#section-e .container:hover .content,
+#section-f .container:hover .overlay,
+#section-f .container:hover .content {
     opacity: 0.7;
 }
 
 #section-a .container:hover .title,
 #section-b .container:hover .title,
 #section-c .container:hover .title,
-#section-d .container:hover .title {
+#section-d .container:hover .title,
+#section-e .container:hover .title,
+#section-f .container:hover .title {
     opacity: 0;
 }
 
 #section-a .title,
 #section-b .title,
 #section-c .title,
-#section-d .title {
+#section-d .title,
+#section-e .title,
+#section-f .title {
     position: absolute;
     font-family: Rockwell;
     font-size: 2em;
@@ -126,7 +160,9 @@
 #section-a .content,
 #section-b .content,
 #section-c .content,
-#section-d .content {
+#section-d .content,
+#section-e .content,
+#section-f .content {
     position: absolute;
     top: 50%;
     left: 50%;

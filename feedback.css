@@ -1,0 +1,38 @@
+/* Section A */
+#section-a {
+    background: #fff;
+    color: #000;
+}
+
+#section-a .content-title {
+    font-family: Rockwell;
+    font-size: 1.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0;
+}
+
+/* Section B */
+#section-b {
+    
+}
+
+#section-a .content-wrap,
+#section-b .content-wrap {
+    padding: 0 0.5em;
+    padding-bottom: 0.3em;
+}
+
+#section-b .content-title {
+    font-size: 20px;
+}
+
+/* Section C */
+#section-c .logo img {
+    width: 8em;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+#section-c .content-wrap {
+    padding: 0.5em;
+}

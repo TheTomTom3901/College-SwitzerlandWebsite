@@ -33,62 +33,60 @@
         </ul>
     </nav>
 
-    <!-- Showcase -->
-    <section id="showcase" class="grid">
-        <div class="bg-image"></div>
-        <div class="content-wrap">
-            <h2 class="content-title">Geneva</h2>
-            <div class="content-text">
-                The city of Geneva is situated in the West of Switzerland where the Rhône exits Lake Geneva. With a population of around 200,000 it is the 2nd biggest city after Zürich and hosts the headquarters of many International bodies such as: United Nations and Red Cross. Surrounded by 3 mountain chains allows for some great views and landscape to which the city takes full advantage off. The Geneva Conventions are also held here which concern the treatment of wartime non-combatants/prisoners of war.
+    <!-- Zurich -->
+    <section id="zurich" class="location grid">
+        <div class="showcase">
+            <div class="bg-image"></div>
+            <div class="content-wrap">
+                <h2 class="content-title">Zürich</h2>
+                <div class="content-text">
+                    The largest city in Switzerland having a population of around 402,762 (as of 2016), Zürich is located in the north on the tip of Lake Zürich. This location allows for some beautiful views and tourist activities with a large majority of Switzerland tourism based here. There is a large amount of culture within Zürich with many museums and art galleries all throughout the city, including the Swiss National Museum and the Kunsthaus.
+                </div>
+                <a href="https://www.myswitzerland.com/en-gb/zurich.html" class="btn">More Information</a>
             </div>
-            <a href="http://www.ville-geneve.ch/welcome-geneva/" class="btn">More Information</a>
         </div>
-    </section>
-
-    <!-- Section A -->
-    <section id="section-a" class="grid">
-        <div class="content-wrap">
+        <div class="gallery">
             <div class="slideshow-container">
                 <div class="mySlides fade">
-                    <img src="resources/tourism/geneva/town.jpg">
+                    <img src="resources/tourism/zurich/sea-town.jpg">
                 </div>
                 
                 <div class="mySlides fade">
-                    <img src="resources/tourism/geneva/fountain.jpg">
+                    <img src="resources/tourism/zurich/hotel.jpg">
                 </div>
                 
                 <div class="mySlides fade">
-                    <img src="resources/tourism/geneva/winter.jpeg">
+                    <img src="resources/tourism/zurich/river.jpg">
                 </div>
                     
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides(-1, 'zurich')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'zurich')">&#10095;</a>
                 
             </div>
             
             <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span> 
-                <span class="dot" onclick="currentSlide(2)"></span> 
-                <span class="dot" onclick="currentSlide(3)"></span> 
+                <span class="dot" onclick="currentSlide(1, 'zurich')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'zurich')"></span> 
+                <span class="dot" onclick="currentSlide(3, 'zurich')"></span> 
             </div>
         </div>
 
         <script>
             var slideIndex = 1;
-            showSlides(slideIndex);
+            showSlides(slideIndex, 'zurich');
             
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
+            function plusSlides(n, value) {
+              showSlides(slideIndex += n, value);
             }
             
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
+            function currentSlide(n, value) {
+              showSlides(slideIndex = n, value);
             }
             
-            function showSlides(n) {
+            function showSlides(n, value) {
                 var i;
-                var slides = document.getElementsByClassName("mySlides");
-                var dots = document.getElementsByClassName("dot");
+                var slides = document.getElementById(value).getElementsByClassName("mySlides");
+                var dots = document.getElementById(value).getElementsByClassName("dot");
                 if (n > slides.length) {slideIndex = 1}    
                 if (n < 1) {slideIndex = slides.length}
                 for (i = 0; i < slides.length; i++) {
@@ -103,12 +101,156 @@
         </script>
     </section>
 
-    <!-- Section B -->
-    <section id="section-b" class="grid">
-        <div class="content-wrap">
-            <img src="resources/tourism/map.png" alt="" class="map">
-            <div class="material-icons" style="font-size: 30px">&#xe55c;</div>
+    <!-- Matterhorn -->
+    <section id="matterhorn" class="location grid">
+        <div class="showcase">
+            <div class="bg-image"></div>
+            <div class="content-wrap">
+                <h2 class="content-title">Matterhorn</h2>
+                <div class="content-text">
+                    There are a wide variety of different attractions to be discovered around the Matterhorn. A top excursion is Gornergrat. On this three-thousand metre mountain ridge there is a viewing platform with a truly unforgettable view of the Matterhorn and the surrounding mountain world. Our if you prefer, the Matterhorn can also be admired from the Rothorn. The Matterhorn glacier paradise is the highest summer ski region in Europe and is open 365 days a year.
+                </div>
+                <a href="https://www.zermatt.ch/en/matterhorn" class="btn">More Information</a>
+            </div>
         </div>
+        <div class="gallery">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="resources/tourism/matterhorn/forest.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/matterhorn/mountain.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/matterhorn/town.jpg">
+                </div>
+                    
+                <a class="prev" onclick="plusSlides(-1, 'matterhorn')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'matterhorn')">&#10095;</a>
+                
+            </div>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1, 'matterhorn')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'matterhorn')"></span> 
+                <span class="dot" onclick="currentSlide(3, 'matterhorn')"></span> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Interlaken -->
+    <section id="interlaken" class="location grid">
+        <div class="showcase">
+            <div class="bg-image"></div>
+            <div class="content-wrap">
+                <h2 class="content-title">Interlaken</h2>
+                <div class="content-text">
+                    Today it makes daredevils scream with adrenaline-loaded activities. Straddling the glacier-fed Lakes Thun and Brienz the town is the gateway to Switzerland's fabled Jungfrau region and the country's hottest adventure destination bar none. If the touristy town itself leaves you cold, the mountains on its doorstep will blow your mind, particularly if you’re abseiling waterfalls, thrashing white water or gliding soundlessly above 4000m summits.
+                </div>
+                <a href="https://www.myswitzerland.com/en-gb/interlaken.html" class="btn">More Information</a>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="resources/tourism/interlaken/cable.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/interlaken/road.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/interlaken/town.jpg">
+                </div>
+                    
+                <a class="prev" onclick="plusSlides(-1, 'interlaken')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'interlaken')">&#10095;</a>
+                
+            </div>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1, 'interlaken')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'interlaken')"></span> 
+                <span class="dot" onclick="currentSlide(3, 'interlaken')"></span> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Chateau de Chilion -->
+    <section id="chateau-de-chilion" class="location grid">
+        <div class="showcase">
+            <div class="bg-image"></div>
+            <div class="content-wrap">
+                <h2 class="content-title">Chateau de Chilion</h2>
+                <div class="content-text">
+                    This island castle based on Lake Geneva dates back to 1005 and has always been of great interest to tourists/visitors. Among the most visited castles in Europe you can quickly see why it brings such attention to this area with its stunning surroundings and photo opportunities. The castle can be viewed from a variety of areas and has many secrets to be explored deeper by taking a tour or simply walking around.
+                </div>
+                <a href="https://www.chillon.ch/en/" class="btn">More Information</a>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="resources/tourism/chateau-de-chilion/lake.jpg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/chateau-de-chilion/snow.jpeg">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="resources/tourism/chateau-de-chilion/castle.jpg">
+                </div>
+                    
+                <a class="prev" onclick="plusSlides(-1, 'chateau-de-chilion')">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 'chateau-de-chilion')">&#10095;</a>
+                
+            </div>
+            
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1, 'chateau-de-chilion')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'chateau-de-chilion')"></span> 
+                <span class="dot" onclick="currentSlide(3, 'chateau-de-chilion')"></span> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Section B -->
+    <section id="section-b">
+        <div class="container">
+            <div class="overlay">
+                <img src="resources/tourism/map.png" alt="" class="map">
+                <div class="material-icons marker active" id="zurich" onclick="changeLocation('zurich')">&#xe55c;</div>
+                <!-- <div class="zurich-marker-name">Zurich</div> -->
+                <div class="material-icons marker" id="matterhorn" onclick="changeLocation('matterhorn')">&#xe55c;</div>
+                <div class="matterhorn-marker-name">Matterhorn</div>
+                <div class="material-icons marker" id="interlaken" onclick="changeLocation('interlaken')">&#xe55c;</div>
+                <div class="interlaken-marker-name">Interlaken</div>
+                <div class="material-icons marker" id="chateau-de-chilion" onclick="changeLocation('chateau-de-chilion')">&#xe55c;</div>
+                <div class="chateau-de-chilion-marker-name">Chateau de Chilion</div>
+            </div>
+        </div>
+
+        <script>
+            function changeLocation(value) {
+                var places = document.getElementsByClassName("location");
+                var markers = document.getElementsByClassName("material-icons");
+                for (i = 0; i < places.length; i++) {
+                    places[i].style.display = "none";  
+                }
+                for (i = 0; i < markers.length; i++) {
+                    markers[i].className = markers[i].className.replace(" active", "");
+                    if(markers[i].id == value) {
+                        markers[i].className += " active";
+                    }
+                }
+                document.getElementById(value).style.display = "inline-block";
+                showSlides(slideIndex = 1, value);
+            }
+        </script>
     </section>
 
     <!-- Footer -->
