@@ -3,17 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="Switzerland, Hadron Collider, Cern, Bern, Zurich, Zürich">
-    <meta name="description" content="">
+    <meta name="keywords" content="Switzerland, Zurich, Zürich, Matterhorn, Interlaken, Chateau de Chilion, Skiing, Lake Geneva, Europe, Castle, Mountain, Glacier, Museum">
+    <meta name="description" content="There are many different places to visit while in Switzerland, this page will give some quick informtion, pictures and a selection of points on the map to visit/learn about.">
+    <meta name="author" content="TomTom">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Switzerland Tourism | Tourism</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tourism.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script>
+        //Set the default slide number
+        var slideIndex = 1;
+        
+        //Increase the current slide
+        function plusSlides(n, value) {
+          showSlides(slideIndex += n, value);
+        }
+        
+        //Change current slide to a specified slide
+        function currentSlide(n, value) {
+          showSlides(slideIndex = n, value);
+        }
+        
+        //Show the given sections slideshow
+        function showSlides(n, value) {
+            var i;
+            var slides = document.getElementById(value).getElementsByClassName("slide");
+            var dots = document.getElementById(value).getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+
+        //Hide all location information then show the given locations information
+        function changeLocation(value) {
+            var places = document.getElementsByClassName("location");
+            var markers = document.getElementsByClassName("material-icons");
+            for (i = 0; i < places.length; i++) {
+                places[i].style.display = "none";  
+            }
+            for (i = 0; i < markers.length; i++) {
+                markers[i].className = markers[i].className.replace(" active", "");
+                if(markers[i].id == value + "-mark") {
+                    markers[i].className += " active";
+                }
+            }
+            document.getElementById(value).style.display = "inline-block";
+            showSlides(slideIndex = 1, value);
+        }
+    </script>
 </head>
 
-<body>
+<!-- Load the default slideshow -->
+<body onload="showSlides(slideIndex, 'zurich')">
     <!-- Navigation Bar -->
     <nav id="navbar">
         <h1>National Tourist Board of Switzerland </h1>
@@ -35,6 +85,7 @@
 
     <!-- Zurich -->
     <section id="zurich" class="location grid">
+        <!-- Content -->
         <div class="showcase">
             <div class="bg-image"></div>
             <div class="content-wrap">
@@ -42,67 +93,43 @@
                 <div class="content-text">
                     The largest city in Switzerland having a population of around 402,762 (as of 2016), Zürich is located in the north on the tip of Lake Zürich. This location allows for some beautiful views and tourist activities with a large majority of Switzerland tourism based here. There is a large amount of culture within Zürich with many museums and art galleries all throughout the city, including the Swiss National Museum and the Kunsthaus.
                 </div>
+                <!-- Extra information option -->
                 <a href="https://www.myswitzerland.com/en-gb/zurich.html" class="btn">More Information</a>
             </div>
         </div>
+        <!-- Gallery -->
         <div class="gallery">
             <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="resources/tourism/zurich/sea-town.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/zurich/sea-town.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/zurich/hotel.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/zurich/hotel.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/zurich/river.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/zurich/river.png">
                 </div>
-                    
+                
+                <!-- Slideshow controls -->
                 <a class="prev" onclick="plusSlides(-1, 'zurich')">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 'zurich')">&#10095;</a>
                 
             </div>
             
+            <!-- Slideshow icons -->
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1, 'zurich')"></span> 
                 <span class="dot" onclick="currentSlide(2, 'zurich')"></span> 
                 <span class="dot" onclick="currentSlide(3, 'zurich')"></span> 
             </div>
         </div>
-
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex, 'zurich');
-            
-            function plusSlides(n, value) {
-              showSlides(slideIndex += n, value);
-            }
-            
-            function currentSlide(n, value) {
-              showSlides(slideIndex = n, value);
-            }
-            
-            function showSlides(n, value) {
-                var i;
-                var slides = document.getElementById(value).getElementsByClassName("mySlides");
-                var dots = document.getElementById(value).getElementsByClassName("dot");
-                if (n > slides.length) {slideIndex = 1}    
-                if (n < 1) {slideIndex = slides.length}
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";  
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-            }
-        </script>
     </section>
 
     <!-- Matterhorn -->
     <section id="matterhorn" class="location grid">
+        <!-- Content -->
         <div class="showcase">
             <div class="bg-image"></div>
             <div class="content-wrap">
@@ -113,25 +140,28 @@
                 <a href="https://www.zermatt.ch/en/matterhorn" class="btn">More Information</a>
             </div>
         </div>
+        <!-- Gallery -->
         <div class="gallery">
             <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="resources/tourism/matterhorn/forest.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/matterhorn/forest.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/matterhorn/mountain.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/matterhorn/mountain.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/matterhorn/town.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/matterhorn/lake.png">
                 </div>
-                    
+                
+                <!-- Slideshow controls -->
                 <a class="prev" onclick="plusSlides(-1, 'matterhorn')">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 'matterhorn')">&#10095;</a>
                 
             </div>
             
+            <!-- Slideshow icons -->
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1, 'matterhorn')"></span> 
                 <span class="dot" onclick="currentSlide(2, 'matterhorn')"></span> 
@@ -142,6 +172,7 @@
 
     <!-- Interlaken -->
     <section id="interlaken" class="location grid">
+        <!-- Content -->
         <div class="showcase">
             <div class="bg-image"></div>
             <div class="content-wrap">
@@ -152,25 +183,28 @@
                 <a href="https://www.myswitzerland.com/en-gb/interlaken.html" class="btn">More Information</a>
             </div>
         </div>
+        <!-- Gallery -->
         <div class="gallery">
             <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="resources/tourism/interlaken/cable.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/interlaken/cable.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/interlaken/road.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/interlaken/bridge.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/interlaken/town.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/interlaken/town.png">
                 </div>
-                    
+                
+                <!-- Slideshow controls -->
                 <a class="prev" onclick="plusSlides(-1, 'interlaken')">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 'interlaken')">&#10095;</a>
                 
             </div>
             
+            <!-- Slideshow icons -->
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1, 'interlaken')"></span> 
                 <span class="dot" onclick="currentSlide(2, 'interlaken')"></span> 
@@ -181,6 +215,7 @@
 
     <!-- Chateau de Chilion -->
     <section id="chateau-de-chilion" class="location grid">
+        <!-- Content -->
         <div class="showcase">
             <div class="bg-image"></div>
             <div class="content-wrap">
@@ -191,25 +226,28 @@
                 <a href="https://www.chillon.ch/en/" class="btn">More Information</a>
             </div>
         </div>
+        <!-- Gallery -->
         <div class="gallery">
             <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="resources/tourism/chateau-de-chilion/lake.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/chateau-de-chilion/lake.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/chateau-de-chilion/snow.jpeg">
+                <div class="slide fade">
+                    <img src="resources/tourism/chateau-de-chilion/snow.png">
                 </div>
                 
-                <div class="mySlides fade">
-                    <img src="resources/tourism/chateau-de-chilion/castle.jpg">
+                <div class="slide fade">
+                    <img src="resources/tourism/chateau-de-chilion/castle.png">
                 </div>
-                    
+                
+                <!-- Slideshow controls -->
                 <a class="prev" onclick="plusSlides(-1, 'chateau-de-chilion')">&#10094;</a>
                 <a class="next" onclick="plusSlides(1, 'chateau-de-chilion')">&#10095;</a>
                 
             </div>
             
+            <!-- Slideshow icons -->
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1, 'chateau-de-chilion')"></span> 
                 <span class="dot" onclick="currentSlide(2, 'chateau-de-chilion')"></span> 
@@ -218,39 +256,70 @@
         </div>
     </section>
 
+    <!-- Beverin -->
+    <section id="beverin" class="location grid">
+            <!-- Content -->
+            <div class="showcase">
+                <div class="bg-image"></div>
+                <div class="content-wrap">
+                    <h2 class="content-title">Beverin Nature Park</h2>
+                    <div class="content-text">
+                        Home of the ibex, this park covers 412 square kilometres and includes large parts of the Safien Valley. Peace, majesty and frugal are defining characteristics of this area and like many other parts of swiss nature, the views and scenery are breathtaking. With steep hills and rolling mountains this gives amazing tracks for hikers with some forest tracks mixed in.
+                    </div>
+                    <a href="https://www.myswitzerland.com/en-gb/beverin-nature-park.html" class="btn">More Information</a>
+                </div>
+            </div>
+            <!-- Gallery -->
+            <div class="gallery">
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="resources/tourism/beverin/fence.png">
+                    </div>
+                    
+                    <div class="slide fade">
+                        <img src="resources/tourism/beverin/path.png">
+                    </div>
+                    
+                    <div class="slide fade">
+                        <img src="resources/tourism/beverin/wildlife.png">
+                    </div>
+                    
+                    <!-- Slideshow controls -->
+                    <a class="prev" onclick="plusSlides(-1, 'beverin')">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 'beverin')">&#10095;</a>
+                    
+                </div>
+                
+                <!-- Slideshow icons -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1, 'beverin')"></span> 
+                    <span class="dot" onclick="currentSlide(2, 'beverin')"></span> 
+                    <span class="dot" onclick="currentSlide(3, 'beverin')"></span> 
+                </div>
+            </div>
+        </section>
+
     <!-- Section B -->
     <section id="section-b">
-        <div class="container">
-            <div class="overlay">
-                <img src="resources/tourism/map.png" alt="" class="map">
-                <div class="material-icons marker active" id="zurich" onclick="changeLocation('zurich')">&#xe55c;</div>
-                <!-- <div class="zurich-marker-name">Zurich</div> -->
-                <div class="material-icons marker" id="matterhorn" onclick="changeLocation('matterhorn')">&#xe55c;</div>
-                <div class="matterhorn-marker-name">Matterhorn</div>
-                <div class="material-icons marker" id="interlaken" onclick="changeLocation('interlaken')">&#xe55c;</div>
-                <div class="interlaken-marker-name">Interlaken</div>
-                <div class="material-icons marker" id="chateau-de-chilion" onclick="changeLocation('chateau-de-chilion')">&#xe55c;</div>
-                <div class="chateau-de-chilion-marker-name">Chateau de Chilion</div>
-            </div>
-        </div>
+        <!-- Map of clickable locations -->
+        <div class="map">
+            <img src="resources/tourism/empty-map.png" alt="">
+            
+            <div class="material-icons marker active" id="zurich-mark" onclick="changeLocation('zurich')">place</div>
+            <div class="marker-name" id="zurich-name">Zurich</div>
 
-        <script>
-            function changeLocation(value) {
-                var places = document.getElementsByClassName("location");
-                var markers = document.getElementsByClassName("material-icons");
-                for (i = 0; i < places.length; i++) {
-                    places[i].style.display = "none";  
-                }
-                for (i = 0; i < markers.length; i++) {
-                    markers[i].className = markers[i].className.replace(" active", "");
-                    if(markers[i].id == value) {
-                        markers[i].className += " active";
-                    }
-                }
-                document.getElementById(value).style.display = "inline-block";
-                showSlides(slideIndex = 1, value);
-            }
-        </script>
+            <div class="material-icons marker" id="matterhorn-mark" onclick="changeLocation('matterhorn')">place</div>
+            <div class="marker-name" id="matterhorn-name">Matterhorn</div>
+
+            <div class="material-icons marker" id="interlaken-mark" onclick="changeLocation('interlaken')">place</div>
+            <div class="marker-name" id="interlaken-name">Interlaken</div>
+
+            <div class="material-icons marker" id="chateau-de-chilion-mark" onclick="changeLocation('chateau-de-chilion')">place</div>
+            <div class="marker-name" id="chateau-de-chilion-name">Chateau de Chilion</div>
+
+            <div class="material-icons marker" id="beverin-mark" onclick="changeLocation('beverin')">place</div>
+            <div class="marker-name" id="beverin-name">Beverin</div>
+        </div>
     </section>
 
     <!-- Footer -->

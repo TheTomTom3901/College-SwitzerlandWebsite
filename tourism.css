@@ -1,17 +1,22 @@
 /* Shared */
-#zurich .showcase,
-#matterhorn .showcase,
-#interlaken .showcase,
-#chateau-de-chilion .showcase {
+.showcase {
+    min-height: 280px;
     color: #fff;
     text-align: center;
-    min-height: 280px;
 }
 
-#zurich .showcase .btn,
-#matterhorn .showcase .btn,
-#interlaken .showcase .btn,
-#chateau-de-chilion .showcase .btn {
+.bg-image {
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.btn {
     display: inline-block;
     background: #333;
     color: #fff;
@@ -21,80 +26,52 @@
     margin: 10px;
 }
 
-#zurich .showcase .btn:hover,
-#matterhorn .showcase .btn:hover,
-#interlaken .showcase .btn:hover,
-#chateau-de-chilion .showcase .btn:hover {
+.btn:hover {
     background: #eaeaea;
     color: #333;
 }
 
 
-#zurich .showcase .content-title,
-#matterhorn .showcase .content-title,
-#interlaken .showcase .content-title,
-#chateau-de-chilion .showcase .content-title {
+.content-title {
     font-family: Rockwell;
     font-size: 1.5em;
     padding-top: 0.3em;
     padding-bottom: 0;
 }
 
-#zurich .showcase .content-text,
-#matterhorn .showcase .content-text,
-#interlaken .showcase .content-text,
-#chateau-de-chilion .showcase .content-text {
+.content-text {
     padding-bottom: 0.5em;
 }
 
-#zurich .showcase .content-wrap,
-#matterhorn .showcase .content-wrap,
-#interlaken .showcase .content-wrap,
-#chateau-de-chilion .showcase .content-wrap {
+.content-wrap {
     padding: 0 1.5em;
     padding-bottom: 0.5em;
 }
 
-#zurich .gallery,
-#matterhorn .gallery,
-#interlaken .gallery,
-#chateau-de-chilion .gallery {
+.gallery {
     background: #fff;
     color: #000;
     padding: 0 1.5em;
     padding-bottom: 0.5em;
 }
 
-#zurich .gallery .slideshow-container,
-#matterhorn .gallery .slideshow-container,
-#interlaken .gallery .slideshow-container,
-#chateau-de-chilion .gallery .slideshow-container {
-    max-width: 600px;
+.slideshow-container {
+    max-width: 800px;
     position: relative;
     margin: auto;
     padding-top: 1em;
     padding-bottom: 0.5em;
 }
 
-#zurich .gallery .mySlides,
-#matterhorn .gallery .mySlides,
-#interlaken .gallery .mySlides,
-#chateau-de-chilion .gallery .mySlides {
-    display: none
+.slide {
+    display: none;
 }
 
-#zurich .gallery img,
-#matterhorn .gallery img,
-#interlaken .gallery img,
-#chateau-de-chilion .gallery img {
+.gallery img {
     vertical-align: middle;
-    height: 300px;
 }
 
-#zurich .gallery .prev, #zurich .gallery .next,
-#matterhorn .gallery .prev, #matterhorn .gallery .next,
-#interlaken .gallery .prev, #interlaken .gallery .next,
-#chateau-de-chilion .gallery .prev, #chateau-de-chilion .gallery .next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -107,55 +84,37 @@
     transition: 0.6s ease;
 }
 
-#zurich .gallery .next,
-#matterhorn .gallery .next,
-#interlaken .gallery .next,
-#chateau-de-chilion .gallery .next {
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-#zurich .gallery .prev,
-#matterhorn .gallery .prev,
-#interlaken .gallery .prev,
-#chateau-de-chilion .gallery .prev {
+.prev {
     left: 0;
     border-radius: 0 3px 3px 0;
 }
 
-#zurich .gallery .prev:hover, #zurich .gallery .next:hover,
-#matterhorn .gallery .prev:hover, #matterhorn .gallery .next:hover,
-#interlaken .gallery .prev:hover, #interlaken .gallery .next:hover,
-#chateau-de-chilion .gallery .prev:hover, #chateau-de-chilion .gallery .next:hover {
+.prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
-#zurich .gallery .dot,
-#matterhorn .gallery .dot,
-#interlaken .gallery .dot,
-#chateau-de-chilion .gallery .dot {
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #eaeaea;
+    background-color: rgb(77, 77, 77);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
-#zurich .gallery .active, #zurich .gallery .dot:hover,
-#matterhorn .gallery .active, #matterhorn .gallery .dot:hover,
-#interlaken .gallery .active, #interlaken .gallery .dot:hover,
-#chateau-de-chilion .gallery .active, #chateau-de-chilion .gallery .dot:hover {
+.gallery .active, .dot:hover {
     background-color: #000;
 }
 
 /* Fading animation */
-#zurich .gallery .fade,
-#matterhorn .gallery .fade,
-#interlaken .gallery .fade,
-#chateau-de-chilion .gallery .fade {
+.fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
@@ -172,30 +131,13 @@
     to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    #zurich .gallery .prev, #zurich .gallery .next, #zurich .gallery .text,
-    #matterhorn .gallery .prev, #matterhorn .gallery .next, #matterhorn .gallery .text,
-    #interlaken .gallery .prev, #interlaken .gallery .next, #interlaken .gallery .text,
-    #chateau-de-chilion .gallery .prev, #chateau-de-chilion .gallery .next, #chateau-de-chilion .gallery .text {
-        font-size: 11px}
-}
-
 /* Zurich */
 #zurich {
     display: inline-block;
 }
 
 #zurich .bg-image {
-    position: absolute;
-    background: #333 url("resources/tourism/zurich/town.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-    z-index: -1;
-    opacity: 0.5;
+    background-image: url("resources/tourism/zurich/town.jpg");
 }
 
 /* Matterhorn */
@@ -204,15 +146,7 @@
 }
 
 #matterhorn .bg-image {
-    position: absolute;
-    background: #333 url("resources/tourism/matterhorn/matterhorn.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-    z-index: -1;
-    opacity: 0.5;
+    background-image: url("resources/tourism/matterhorn/matterhorn.jpg");
 }
 
 /* Interlaken */
@@ -221,15 +155,7 @@
 }
 
 #interlaken .bg-image {
-    position: absolute;
-    background: #333 url("resources/tourism/interlaken/interlaken.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-    z-index: -1;
-    opacity: 0.5;
+    background-image: url("resources/tourism/interlaken/interlaken.jpg");
 }
 
 /* Chateau de Chilion */
@@ -238,60 +164,94 @@
 }
 
 #chateau-de-chilion .bg-image {
-    position: absolute;
-    background: #333 url("resources/tourism/chateau-de-chilion/chateau-de-chilion.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 280px;
-    z-index: -1;
-    opacity: 0.5;
+    background-image: url("resources/tourism/chateau-de-chilion/chateau-de-chilion.jpg");
+}
+
+#beverin {
+    display: none;
+}
+
+#beverin .bg-image {
+    background-image: url("resources/tourism/beverin/hill.jpg")
 }
 
 /* Section B */
-#section-b {
-    background: #333;
-    height: 500px;
-}
-
-#section-b .container {
-    position: relative;
-    display: inline-block;
-    height: 500px;
-    width: 100%;
-}
-
-#section-b .overlay {
-    position: absolute;
-    background-color: #333;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 500px;
-    width: 100%;
-}
-
 #section-b .map {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 90%;
-    height: 100%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    padding: 0.5em 0.5em;
+    max-width: 1200px;
+    display: inline-block;
 }
 
 #section-b .marker {
     position: absolute;
     color: #333;
-    font-size: 25px;
+    font-size: 125%;
     transform: translate(-50%, -50%);
     transition: 0.5s linear;
 }
 
+#section-b .marker-name {
+    position: absolute;
+    color: #333;
+    font-size: 65%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s linear;
+    font-weight: bold;
+}
+
+#section-b #zurich-mark {
+    top: 19.5%;
+    left: 55%;
+}
+
+#section-b #zurich-name {
+    top: 24%;
+    left: 55%;
+}
+
+#section-b #matterhorn-mark {
+    top: 83%;
+    left: 38%;
+}
+
+#section-b #matterhorn-name {
+    top: 79%;
+    left: 38%;
+}
+
+#section-b #interlaken-mark {
+    top: 53%;
+    left: 45%;
+}
+
+#section-b #interlaken-name {
+    top: 57%;
+    left: 45%;
+}
+
+#section-b #chateau-de-chilion-mark {
+    top: 64%;
+    left: 25%;
+}
+
+#section-b #chateau-de-chilion-name {
+    top: 60%;
+    left: 25%;
+}
+
+#section-b #beverin-mark {
+    top: 58%;
+    left: 74%;
+}
+
+#section-b #beverin-name {
+    top: 62%;
+    left: 74%;
+}
+
 #section-b .marker:hover {
-    font-size: 28px;
+    font-size: 130%;
     transition: 0.5s linear;
 }
 
@@ -299,69 +259,3 @@
     color: #fff;
     font-weight: bold;
 }
-
-#section-b #zurich {
-    display: inline-block;
-    top: 19.5%;
-    left: 55%;
-}
-
-#section-b #matterhorn {
-    display: inline-block;
-    top: 83%;
-    left: 38%;
-}
-
-#section-b #interlaken {
-    display: inline-block;
-    top: 53%;
-    left: 45%;   
-}
-
-#section-b #chateau-de-chilion {
-    display: inline-block;
-    top: 64%;
-    left: 25%;
-}
-
-#section-b .zurich-marker-name {
-    position: absolute;
-    top: 24%;
-    left: 55%;
-    color: #333;
-    font-size: 15px;
-    transform: translate(-50%, -50%);
-    transition: 0.5s linear;
-}
-
-#section-b .matterhorn-marker-name {
-    position: absolute;
-    top: 79%;
-    left: 38%;
-    color: #333;
-    font-size: 15px;
-    transform: translate(-50%, -50%);
-    transition: 0.5s linear;
-}
-
-#section-b .interlaken-marker-name {
-    position: absolute;
-    top: 49%;
-    left: 45%;
-    color: #333;
-    font-size: 15px;
-    transform: translate(-50%, -50%);
-    transition: 0.5s linear;
-}
-
-#section-b .chateau-de-chilion-marker-name {
-    position: absolute;
-    top: 60%;
-    left: 25%;
-    color: #333;
-    font-size: 15px;
-    transform: translate(-50%, -50%);
-    transition: 0.5s linear;
-}
-
-/* Media Queries */

@@ -4,28 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Switzerland, Europe, Feedback, Comments, Improvements">
+    <meta name="description" content="Feedback is always welcome and will allow for constant improvements to the site">
+    <meta name="author" content="TomTom">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Switzerland Tourism | Feedback</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="feedback.css">
 
     <script>
+        //List of valid emails
         var emails = ["gmail.com", "hotmail.co.uk", "stu.crawley.ac.uk", "sky.com", "hotmail.com", "live.co.uk"];
-        
+
+        //Validate the feedback values and return the correct value afterwards
         function validation() {
-            if(document.feedback.name.value.isEmpty()) {
-                alert("Name must not be empty");
-                return;
+            var form = document.forms["feedback"];
+            if (form.name.value == "") {
+                alert("Please enter your name");
+                return false;
             }
-            if(emails.indexOf(document.feedback.email.value.split('@')[1]) == -1) {
+            //Check that the email provided is not a fake address or something random
+            if(emails.indexOf(form.email.value.split('@')[1]) == -1) {
                 alert("Please enter a valid email");
-                return;
+                return false;
             }
-            if(document.feedback.comments.value.isEmpty()) {
+            if(form.comments.value == "") {
                 alert("Please leave a comment");
-                return;
+                return false;
             }
-            alert("You have submitted a form!");
+            alert("You have submitted a form");
+            form.name.value = "";
+            form.email.value = "";
+            form.comments.value = "";
+            return false;
         }
     </script>
 </head>
@@ -61,7 +72,8 @@
     <!-- Section B -->
     <section id="section-b">
         <div class="content-wrap">
-            <form name="feedback" method="post" action="">
+            <!-- Feedback form -->
+            <form name="feedback" method="post" action="" onsubmit="return validation()">
                 <h2 class="content-title">Name</h2>
                 <input type="text" name="name" id="name">
         
@@ -72,7 +84,7 @@
                 <textarea name="comments" id="comments" cols="30" rows="5"></textarea>
     
                 <br>
-                <input type="button" value="Submit" onclick="validation()" style="font-size: 18px;">
+                <input type="submit" value="Submit" style="font-size: 18px;">
             </form>
         </div>
     </section>

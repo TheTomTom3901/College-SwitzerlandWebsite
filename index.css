@@ -1,8 +1,6 @@
 /* Showcase */
 #showcase {
     min-height: 350px;
-    color: #fff;
-    text-align: center;
 }
 
 #showcase h1 {
@@ -14,7 +12,7 @@
 
 #showcase .bg-image {
     position: absolute;
-    background: #333 url("resources/index/night-town.jpeg");
+    background-image: url("resources/index/night-town.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
