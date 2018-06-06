@@ -189,6 +189,14 @@
     font-size: 125%;
     transform: translate(-50%, -50%);
     transition: 0.5s linear;
+    padding: 10px;
+}
+
+#section-b .marker:hover {
+    cursor: pointer;
+    font-size: 130%;
+    color: rgba(180, 180, 180);
+    transition: 0.5s linear;
 }
 
 #section-b .marker-name {
@@ -248,11 +256,6 @@
 #section-b #beverin-name {
     top: 62%;
     left: 74%;
-}
-
-#section-b .marker:hover {
-    font-size: 130%;
-    transition: 0.5s linear;
 }
 
 #section-b .active {

@@ -13,6 +13,27 @@
     <!-- Global and page specific style sheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
+    <script>
+        function showInfo(value) {
+            var lightbox = document.getElementById("box");
+            lightbox.style.display = "inline-block";
+            var images = document.getElementsByClassName("image");
+            for(i = 0; i < images.length; i++) {
+                images[i].style.display = "none";
+            }
+            document.getElementById(value).style.display = "inline-block";
+        }
+
+        function hideInfo() {
+            document.getElementById("box").style.display = "none";
+        }
+
+        window.onclick = function() {
+            if(event.target == document.getElementById("box")) {
+                document.getElementById("box").style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -69,25 +90,63 @@
         <!-- Gallery images -->
         <ul>
             <li>
-                <img src="resources/index/town.jpg" alt="">
+                <img src="resources/index/town.jpg" alt="" onclick="showInfo('town')">
             </li>
             <li>
-                <img src="resources/index/field.jpg" alt="">
+                <img src="resources/index/field.jpg" alt="" onclick="showInfo('field')">
             </li>
             <li>
-                <img src="resources/index/train.jpg" alt="">
+                <img src="resources/index/train.jpg" alt="" onclick="showInfo('train')">
             </li>
             <li>
-                <img src="resources/index/ice-cave.jpg" alt="">
+                <img src="resources/index/ice-cave.jpg" alt="" onclick="showInfo('ice-cave')">
             </li>
             <li>
-                <img src="resources/index/views.jpg" alt="">
+                <img src="resources/index/views.jpg" alt="" onclick="showInfo('views')">
             </li>
             <li>
-                <img src="resources/index/river.jpg" alt="">
+                <img src="resources/index/river.jpg" alt="" onclick="showInfo('river')">
             </li>
         </ul>
     </section>
+
+    <!-- Lightbox -->
+    <div id="box" class="lightbox grid">
+        <div class="lightbox-text">
+            <div class="close" onclick="hideInfo()">&times;</div>
+            <h3>Gallery Info</h3>
+
+            <div class="image" id="town">
+                <img src="resources/index/town.jpg" alt="">
+                <p>There are many towns just like in the mountainous terrain of Switzerland and if visited will allow for some amazing experiences and locations.</p>
+            </div>
+
+            <div class="image" id="field">
+                <img src="resources/index/field.jpg" alt="">
+                <p>Natural beauty and wildlife are key parts of Switzerland and this picture clearly shows that there is both big and small parts too the beauty of the landscape.</p>
+            </div>
+
+            <div class="image" id="train">
+                <img src="resources/index/train.jpg" alt="">
+                <p>Travelling around the mountainous terrain can be a challenge so using the train routes and other transport will greatly improve the experience. It will also give a vast range of views while travelling around.</p>
+            </div>
+
+            <div class="image" id="ice-cave">
+                <img src="resources/index/ice-cave.jpg" alt="">
+                <p>Switzerlands natural beauty is not always visible, the hidden parts are just as stunning but maybe even more. Areas like the Ice Caves are great examples of this and really let visitors experience the scenery and walk through time.</p>
+            </div>
+
+            <div class="image" id="views">
+                <img src="resources/index/views.jpg" alt="">
+                <p>After experiencing some of the activities and views there are plenty of places that can be visited, these locations provide scenic surroundings and a great space to sit and admire the natural beauty of the country.</p>
+            </div>
+
+            <div class="image" id="river">
+                <img src="resources/index/river.jpg" alt="">
+                <p>All around Switzerland are rivers and these become even more apparent when visiting the towns and citys. Some of these water bodies have activities to take part in such as boat trips so make perfect places to go and visit for a quiet time.</p>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer id="main-footer" class="grid">
